@@ -1,0 +1,31 @@
+<!--
+WEB 151
+Burns
+2/20/19
+-->
+
+<html>
+ <head>
+ </head>
+ 
+ <body>
+ <h1>hello world</h1>
+ </body>
+ 
+ <script>
+ 
+var randomBodyParts = ["Face", "Nose", "Hair", "Finger"];
+ var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+ var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+ var randomwords2 = ["Neck", "Elbow", "Leg", "Toe"];
+ 
+ var randomBodyPart = randomBodyParts[Math.floor(Math.random()*3)];
+ var randomAdjective = randomAdjectives[Math.floor(Math.random()*3)];
+ var randomWord = randomWords[Math.floor(Math.random()*5)];
+ var randomWord2 = randomwords2[Math.floor(Math.random()*4)];
+ var randomInsult = "Your " + randomBodyPart + " is like a " + randomAdjective + "'s" + " " + randomWord + "'s" + randomWord2 + "!!!";
+
+  document.write(randomInsult);
+  </script>
+  </body>
+</html>
