@@ -1,0 +1,71 @@
+<!--
+WEB 151
+Burns
+2/20/19
+-->
+
+<html>
+ <head>
+ </head>
+ <div>
+ <body>
+ <h1>Insult Generator Object</h1>
+ <style>
+	body { 
+	color: black;
+	text-align: center;
+	background-color: white;
+   }
+	div{
+	color: Green;
+	text-align: center;
+	background-color: Black;
+	height: 200px;
+	padding: 100px;
+	margin:0px;
+	font-family:sans-serif;
+	font:Impact;
+   }
+
+	p {
+	color:white;
+	font-family:sans-serif;
+	font:Comic Sans;
+	font-size: 40px;
+	}
+		
+ </style>
+
+<p>
+ <script>
+ var insult = {};
+	/*	 insult.bodypart = {
+			[bodyPart:"Colon" + adjective:"juicy" + animal:"monkey" + animalspart:"face"],	
+			[bodyPart:"Pancreas" + adjective:"stupid" + animal:"hippo" + animalspart:"cheeks"],
+			[bodyPart:"Ear Drum" + adjective:"long" + animal:"worm" + animalspart:"butthole"],
+	
+	};
+	*/
+insult.animal = "Dog";
+
+insult.randomize = function() {
+		 var randomBodyParts = ["Colon", "Pancreas", "Ear Drum"];
+		 var randomAdjectives = ["juicy", "stupid", "long"];
+		 var randomWords = ["monkey", "hippo", "worm", "Rat"];
+		 var animalpart = ["face", "cheeks", "butthole"];
+		 insult.randomBodyPart = randomBodyParts[Math.floor(Math.random()*3)];
+		 insult.randomAdjective = randomAdjectives[Math.floor(Math.random()*3)];
+		 insult.randomWords = randomWords[Math.floor(Math.random()*4)];
+		 insult.animalpart = animalpart[Math.floor(Math.random()*3)];
+ };
+ insult.print = function() {
+ var randomInsult = "Your " + insult.randomBodyPart + " is like a " + insult.randomAdjective + " " + insult.randomWords + "'s " + insult.animalpart + "!!!";
+document.write(randomInsult);
+}
+insult.randomize();
+insult.print();
+  </script>
+  </p>
+  </div>
+  </body>
+</html>
