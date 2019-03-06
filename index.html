@@ -9,26 +9,20 @@ Norris
 
 <html>
  <head>
+  <link rel="stylesheet" href="css/hmstyle.css">
  </head>
  
 <body>
- <h1>Hangman</h1>
+ <h1><br><br>Hangman</h1>
  
- <style>
- h1 { 
- text-align: center;
- 
- }
- 
- 
- </style>
  <script>
 	//Create an array of words
 	var words = [
-	"javascript",
-	"monkey",
-	"amazing",
-	"pancake"
+	"imperial",
+	"darthvader",
+	"sith",
+	"darkside",
+	"force"
 	];
 	
 	// Pick a random word
@@ -41,12 +35,14 @@ Norris
 	}
 	
 	var remainingLetters = word.length;
-	
+	count = 0 
 	//The game loop 
 	while (remainingLetters > 0) {
 	//Show players their progress
 	alert(answerArray.join(" "));
-	
+	document.write("<p> Try #" + count + ": " + answerArray.join(" ") + "</p>");
+	document.write("<br>");
+	count++;
 	//Get a guess from the player
 	var guess = prompt("Guess a letter, or click cancel to stop playing.");
 	if (guess === null) {
@@ -69,6 +65,7 @@ Norris
   //show the answer and congratulate the player
   alert(answerArray.join(" "));
   alert("Good job! The answer was " +word);
+  document.write(answerArray);
  </script>
 </body> 
  
